@@ -13,17 +13,21 @@ In some languages, a string is basically an array of char (eg. Pascal).
 Within the code, what they're doing is checking each char of the password randomly, one per line. This way, it is more difficult to find out the password in comparison to plain text.
 
 **Example**
+```c
 Char[3] password; # A password string with 3 chars
 
 password[3] = 9;  # Assign each position with a char
 password[1] = 0;
 password[2] = 5;
+```
 
 You see? In a complex string you couln't figure out the password just by looking at it. If you arrange them in order, it became pretty easy.
 
+```c
 password[1] = 0;
 password[2] = 5;
 password[3] = 9;
+```
 
 The principle there is the same, the only caviat to the story is that they don't store the password in a variable, instead, they check for each char indidually and return them if corrent.
 As you might have noticed, the printed flag (shown if the password is correct) is the user input itself.
